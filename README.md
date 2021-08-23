@@ -2,9 +2,19 @@
 
 This is a simple plugin to reduce how many pigmen pop out of nether portals.
 
+## Configuring
+
+The config file is located in `plugins/ReducePortalSpawns/config.yml`. It has one option, which is the probability for a vanilla spawn to be allowed. By default, it is set to 0.1, which represents 10% of the Mojang spawn rate
+
+```yaml
+chance: 0.1
+```
+
 ## Building
 
-`gradle build`
+```shell
+gradle build
+```
 
 ## License
 
