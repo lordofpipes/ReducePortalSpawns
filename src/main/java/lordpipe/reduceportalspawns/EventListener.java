@@ -18,9 +18,9 @@ public class EventListener implements Listener {
         chance = pl.getConfig().getDouble("chance");
     }
 
-    @EventHandler
+    @EventHandler(ignoreCancelled = true)
     public void onCreatureSpawn(CreatureSpawnEvent event) {
-        if (!event.isCancelled() && event.getSpawnReason() == SpawnReason.NETHER_PORTAL) {
+        if (event.getSpawnReason() == SpawnReason.NETHER_PORTAL) {
             if (rng.nextDouble() > chance) {
                 event.setCancelled(true);
             }
